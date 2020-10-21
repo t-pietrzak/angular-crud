@@ -4,6 +4,7 @@
     width: 100%;
     justify-content: flex-start;
     margin-bottom: 5px;
+    background-color: #b8b8b8;
 
     &__button {
         display: flex;
@@ -14,5 +15,6 @@
         line-height: 1;
         padding: 5px 15px;
         position: relative;
+        font-size: 20px;
     }
 }
