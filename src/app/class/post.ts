@@ -1,6 +1,7 @@
 export class Post {
     key: string;
     title: string;
-    description = Date.now();
+    description: string;
+    timestamp = Date.now();
     published = false
 }

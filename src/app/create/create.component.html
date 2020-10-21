@@ -1,1 +1,17 @@
-<p>create works!</p>
+<section class="create">
+    <div *ngIf="!submitted" class="create__new">
+        <div class="create__row">
+            <label for="title" class="create__label">Tytuł</label>
+            <input type="text" id="title" class="create__input" required [(ngModel)]="post.title">
+        </div>
+        <div class="create__row">
+            <label for="description" class="create__label">Treść</label>
+            <input type="text" id="description" class="create__input" required [(ngModel)]="post.description">
+        </div>
+        <button class="create__button" (click)="savePost()">Dodaj post</button>
+    </div>
+    <div *ngIf="submitted" class="create__next">
+        <div class="create__comunicate">Post został dodany</div>
+        <button class="create__button" (click)="newPost()">Utwórz nowy post</button>
+    </div>
+</section>
