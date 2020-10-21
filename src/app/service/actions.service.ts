@@ -18,4 +18,8 @@ export class ActionsService {
   create(post: Post): any {
     return this.postRef.push(post);
   }
+
+  getAll(): AngularFireList<Post> {
+    return this.postRef;
+  }
 }

@@ -1,1 +1,6 @@
-<p>list works!</p>
+<section class="list">
+    <ul class="list__content">
+        <li class="list__item" *ngFor="let post of posts">{{post.title}}</li>
+    </ul>
+    <button class="list__refresh">Odświerz</button>
+</section>
