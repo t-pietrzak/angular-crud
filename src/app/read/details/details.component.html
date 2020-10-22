@@ -8,8 +8,14 @@
         <div class="details__content">{{post.description}}</div>
     </div>
     <div class="details__menu">
+<<<<<<< HEAD
         <div class="details__status" [ngClass]="post.published ? 'publicated' : 'unpublicated'">{{post.published ? 'Opublikowany' : 'Nieopublikowany'}}</div>
         <a class="details__button" [routerLink]="['/update/', post.key]">Modyfikuj</a>
         <a class="details__button" href="/posts">Widok listy</a>
+=======
+        <div class="details__status" [ngClass]="post.published ? 'publicated' : 'unpublicated'">{{post.published ? 'Odpublikuj' : 'Publikuj'}}</div>
+        <button class="details__button">Modyfikuj</button>
+        <button class="details__button">Widok listy</button>
+>>>>>>> 2b8a7d3127d1b9be4524bbf9b2bbb3aefceb3ef3
     </div>
 </section>
