@@ -23,6 +23,10 @@
         padding: 10px 15px;
     }
 
+    &__menu {
+        display: flex;
+    }
+
     &__button {
         display: block;
         width: 200px;
@@ -30,10 +34,26 @@
         padding: 5px 10px;
         border: 3px solid black;
         border-radius: 3px;
-        background-color: #c5c5c5;
+        background-color: hsl(0, 0%, 77%);
 
         &:hover{
-            background-color:  #b8b8b8;
+            background-color:  hsl(0, 0%, 72%);
+        }
+
+        &.unpublicated {
+            background-color: hsl(0, 50%, 70%);
+
+            &:hover {
+                background-color: hsl(0, 50%, 72%);
+            }
+        }
+
+        &.publicated {
+            background-color: hsl(128, 50%, 70%);
+
+            &:hover {
+                background-color: hsl(128, 50%, 72%);
+            }
         }
     }
 }

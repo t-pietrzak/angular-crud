@@ -7,5 +7,9 @@
         <h3 class="details__name">Treść</h3>
         <div class="details__content">{{post.description}}</div>
     </div>
-    <button class="details__button" [ngClass]="post.published ? 'publicated' : 'unpublicated'">{{post.published ? 'Odpublikuj' : 'Publikuj'}}</button>
+    <div class="details__menu">
+        <button class="details__button" [ngClass]="post.published ? 'publicated' : 'unpublicated'">{{post.published ? 'Odpublikuj' : 'Publikuj'}}</button>
+        <button class="details__button">Modyfikuj</button>
+        <button class="details__button">Widok listy</button>
+    </div>
 </section>
