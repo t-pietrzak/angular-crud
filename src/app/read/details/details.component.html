@@ -8,7 +8,11 @@
         <div class="details__content">{{post.description}}</div>
     </div>
     <div class="details__menu">
+<<<<<<< HEAD
         <button class="details__button" [ngClass]="post.published ? 'publicated' : 'unpublicated'">{{post.published ? 'Odpublikuj' : 'Publikuj'}}</button>
+=======
+        <div class="details__status" [ngClass]="post.published ? 'publicated' : 'unpublicated'">{{post.published ? 'Odpublikuj' : 'Publikuj'}}</div>
+>>>>>>> layout changes
         <button class="details__button">Modyfikuj</button>
         <button class="details__button">Widok listy</button>
     </div>
