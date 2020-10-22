@@ -1,6 +1,14 @@
 <section class="list">
-    <ul class="list__content">
-        <li class="list__item" *ngFor="let post of posts;"><a [routerLink]="['/post/', post.key]">{{post.title}}</a></li>
-    </ul>
-    <button class="list__refresh">Odświerz</button>
+    <div class="list__col">
+        <ul class="list__content">
+            <li class="list__item" *ngFor="let post of posts;"><a [routerLink]="['/post/', post.key]">{{post.title}}</a></li>
+        </ul>
+        <button class="list__refresh">Odświerz</button>
+    </div>
+    <div class="list__col">
+        <div class="list__text">
+            <h2 class="list__title">Widok listy postów</h2>
+            <p class="list__description">Widok przeznaczony do wyświetlenia pełnej listy postów. Można z niego przejść do widoku szczegółowego wybranego postu.</p>
+        </div>
+    </div>
 </section>
