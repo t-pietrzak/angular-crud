@@ -6,10 +6,8 @@ import { ListComponent } from './read/list/list.component';
 
 const routes: Routes = [
   { path:'add', component:CreateComponent },
-  { path:'posts', children: [
-    { path:'list', component:ListComponent },
-    { path: 'details', component:DetailsComponent }
-  ]}
+  { path:'posts', component:ListComponent },
+  { path: 'post/:id', component:DetailsComponent },
 ];
 
 @NgModule({

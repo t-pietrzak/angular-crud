@@ -1,1 +1,11 @@
-<p>details works!</p>
+<section class="details">
+    <div class="details__row">
+        <h3 class="details__name">Tytuł</h3>
+        <div class="details__content">{{post.title}}</div>
+    </div>
+    <div class="details__row">
+        <h3 class="details__name">Treść</h3>
+        <div class="details__content">{{post.description}}</div>
+    </div>
+    <button [ngClass]="post.published ? 'publicated' : 'unpublicated'">{{post.published ? 'Odpublikuj' : 'Publikuj'}}</button>
+</section>

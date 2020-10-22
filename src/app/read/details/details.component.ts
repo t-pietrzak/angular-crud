@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { ActivatedRoute } from '@angular/router';
+import { ActionsService } from '../../service/actions.service';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-details',
@@ -7,9 +12,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor() { }
+  id: string;
+  post: any;
+
+  constructor(private route:ActivatedRoute, private actionsService: ActionsService, private db: AngularFireDatabase) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.id = params['id'];
+    });
+    this.getPost(this.id);
   }
 
+  getPost(id:string) {
+    this.actionsService.get(id).snapshotChanges().subscribe(data =>{
+      this.post = {key: data.key, ...data.payload.val()}
+    });
+  }
 }
