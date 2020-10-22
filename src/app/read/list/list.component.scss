@@ -1,7 +1,12 @@
 .list {
-    display: block;
+    display: flex;
     width: 90%;
     margin: 0 auto;
+    justify-content: space-around;
+
+    &__col {
+        max-width: 50%;
+    }
 
     &__content {
         list-style: none;
@@ -18,6 +23,17 @@
         &:hover{
             background-color:  #b8b8b8;
         }
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        margin: 30px auto;
+        padding: 20px 10px;
+        border: 3px solid #000;
+        border-radius: 3px;
     }
 
     &__item a {
