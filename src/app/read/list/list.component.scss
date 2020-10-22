@@ -13,6 +13,29 @@
         padding: 5px 10px;
         border: 3px solid black;
         border-radius: 3px;
-        background-color:  #b8b8b8;
+        background-color: #c5c5c5;
+
+        &:hover{
+            background-color:  #b8b8b8;
+        }
+    }
+
+    &__item a {
+        color: #000;
+        text-decoration: none;
+        position: relative;
+
+        &:hover {
+            &:after {
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                background-color: #000;
+                left: -10px;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
     }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
-import { Post } from '../class/post'
+import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';
+import { Post } from '../class/post';
 
 @Injectable({
   providedIn: 'root'
@@ -8,18 +8,25 @@ import { Post } from '../class/post'
 export class ActionsService {
 
   private dbPath = '/posts';
+  post: Post;
 
-  postRef: AngularFireList<Post> = null;
+  postsRef: AngularFireList<Post> = null;
+  postRef: AngularFireObject<Post>;
 
   constructor(private db: AngularFireDatabase) {
-    this.postRef = db.list(this.dbPath);
+    this.postsRef = this.db.list(this.dbPath);
   }
 
   create(post: Post): any {
-    return this.postRef.push(post);
+    return this.postsRef.push(post);
   }
 
   getAll(): AngularFireList<Post> {
+    return this.postsRef;
+  }
+
+  get(id: string) {
+    this.postRef = this.db.object('/posts/' + id);
     return this.postRef;
   }
 }
