@@ -29,31 +29,37 @@
 
     &__button {
         display: block;
+        white-space: nowrap;
         width: 200px;
         margin: 0 auto;
         padding: 5px 10px;
         border: 3px solid black;
         border-radius: 3px;
         background-color: hsl(0, 0%, 77%);
+        color: #000;
+        text-decoration: none;
+        text-align: center;
 
         &:hover{
             background-color:  hsl(0, 0%, 72%);
         }
+    }
+
+    &__status {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 5px 10px;
 
         &.unpublicated {
             background-color: hsl(0, 50%, 70%);
-
-            &:hover {
-                background-color: hsl(0, 50%, 72%);
-            }
+            border: 3px solid  hsl(0, 50%, 60%);
         }
 
         &.publicated {
             background-color: hsl(128, 50%, 70%);
-
-            &:hover {
-                background-color: hsl(128, 50%, 72%);
-            }
+            border: 3px solid  hsl(128, 50%, 60%);;
         }
     }
 }
